@@ -1,0 +1,101 @@
+.how-it-works {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.how-it-works-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.how-it-works-subtitle {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 carduri pe rand */
+  gap: 20px;
+  justify-items: center;
+}
+
+.step {
+  width: 100%;
+  max-width: 350px; /* Ajustează pentru carduri mai mari */
+  background: white;
+  border-radius: 20px;
+  padding: 40px 20px;
+  box-shadow: 0px 3px 8px rgba(31, 58, 147, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-icon svg {
+  font-size: 36px;
+  color: #1f3a93; /* Set icon color to match your theme */
+}
+
+.step-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.step-description {
+  font-size: 16px;
+  color: #8d8d8d;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .steps-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 carduri pe rand pentru dispozitive mai mari */
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-title {
+    font-size: 36px;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr; /* 1 card pe rand pe dispozitive mici */
+  }
+
+  .step-icon svg {
+    font-size: 30px;
+  }
+}

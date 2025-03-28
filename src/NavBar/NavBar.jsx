@@ -1,21 +1,25 @@
 import { useState } from "react";
 import logo from "/images/logo.svg";
-
 import "./NavBar.css";
 
-const Navbar = () => {
+const Navbar = ({ navigate }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    setIsMenuOpen(false);
   };
 
   return (
     <nav className="navbar">
       <div className="container">
         <div>
-          <a href="/">
+          <button onClick={() => handleNavigation("/")} className="logo-button">
             <img src={logo} alt="logo" className="logo" />
-          </a>
+          </button>
         </div>
         <div className="menu-button">
           <button onClick={toggleMenu} aria-label="Toggle menu">
@@ -34,45 +38,98 @@ const Navbar = () => {
         </div>
         <ul className="nav-links">
           <li>
-            <a href="/">Home</a>
+            <button onClick={() => handleNavigation("/")} className="nav-link">
+              Home
+            </button>
           </li>
           <li>
-            <a href="/jobs">Jobs</a>
+            <button
+              onClick={() => handleNavigation("/jobs")}
+              className="nav-link"
+            >
+              Jobs
+            </button>
           </li>
           <li>
-            <a href="/about-us">About Us</a>
+            <button
+              onClick={() => handleNavigation("/about-us")}
+              className="nav-link"
+            >
+              About Us
+            </button>
           </li>
           <li>
-            <a href="/contact-us">Contact Us</a>
+            <button
+              onClick={() => handleNavigation("/contact-us")}
+              className="nav-link"
+            >
+              Contact Us
+            </button>
           </li>
         </ul>
         <div className="auth-links">
-          <a href="/login">Login</a>
-          <a href="/register" className="register">
+          <button
+            onClick={() => handleNavigation("/login")}
+            className="auth-link"
+          >
+            Login
+          </button>
+          <button
+            onClick={() => handleNavigation("/register")}
+            className="auth-link register"
+          >
             Register
-          </a>
+          </button>
         </div>
         {isMenuOpen && (
           <ul className="mobile-menu">
             <li>
-              <a href="/">Home</a>
+              <button
+                onClick={() => handleNavigation("/")}
+                className="mobile-link"
+              >
+                Home
+              </button>
             </li>
             <li>
-              <a href="/jobs">Jobs</a>
+              <button
+                onClick={() => handleNavigation("/jobs")}
+                className="mobile-link"
+              >
+                Jobs
+              </button>
             </li>
             <li>
-              <a href="/about-us">About Us</a>
+              <button
+                onClick={() => handleNavigation("/about-us")}
+                className="mobile-link"
+              >
+                About Us
+              </button>
             </li>
             <li>
-              <a href="/contact-us">Contact Us</a>
+              <button
+                onClick={() => handleNavigation("/contact-us")}
+                className="mobile-link"
+              >
+                Contact Us
+              </button>
             </li>
             <li>
-              <a href="/login">Login</a>
+              <button
+                onClick={() => handleNavigation("/login")}
+                className="mobile-link"
+              >
+                Login
+              </button>
             </li>
             <li>
-              <a href="/register" className="register">
+              <button
+                onClick={() => handleNavigation("/register")}
+                className="mobile-link register"
+              >
                 Register
-              </a>
+              </button>
             </li>
           </ul>
         )}

@@ -4,7 +4,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import PeopleIcon from "@mui/icons-material/People";
 import ApartmentIcon from "@mui/icons-material/Apartment";
-import companies from "../data/companies";
+import companies from "../data/companies.json";
 import "./Hero.css";
 
 const Hero = () => {

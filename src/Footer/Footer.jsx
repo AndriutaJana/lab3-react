@@ -57,7 +57,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <div className="copyright">
-          © Copyright Tech Hire 2024. Designed by Andritta Jana
+          © Copyright Tech Hire 2024. Designed by Andriuta Jana
         </div>
         <div className="legal-links">
           <span>Privacy Policy</span>

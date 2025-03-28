@@ -19,6 +19,13 @@
   height: 40px;
 }
 
+.logo-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .menu-button {
   display: none;
 }
@@ -36,13 +43,21 @@
 }
 
 .nav-links a {
+  display: none;
+}
+
+.nav-link {
+  background: none;
+  border: none;
   color: white;
-  text-decoration: none;
   font-family: Montserrat, sans-serif;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-link:hover {
   color: #8d8d8d;
 }
 
@@ -52,14 +67,22 @@
 }
 
 .auth-links a {
+  display: none;
+}
+
+.auth-link {
   text-decoration: none;
   color: white;
   padding: 8px 16px;
   border-radius: 4px;
   transition: color 0.3s;
+  background: none;
+  border: none;
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
 }
 
-.auth-links a:hover {
+.auth-link:hover {
   color: #8d8d8d;
 }
 
@@ -90,13 +113,22 @@
 }
 
 .mobile-menu a {
+  display: none;
+}
+
+.mobile-link {
   color: white;
   text-decoration: none;
   font-family: Montserrat, sans-serif;
   transition: color 0.3s;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
 }
 
-.mobile-menu a:hover {
+.mobile-link:hover {
   color: #8d8d8d;
 }
 
